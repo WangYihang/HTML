@@ -1,0 +1,72 @@
+<!--
+	作者：997918108@qq.com
+	时间：2016-06-08
+	描述：前段JavaScript学习总结
+	功能: 通过JavaScript实现改变标签的属性
+			隐藏,显示,改变颜色
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>前段JavaScript学习总结</title>
+		<script type="text/javascript">
+			function show(){
+				document.getElementById("id-p").style.display="block";
+			}
+			function hide(){
+				document.getElementById("id-p").style.display="none";
+			}
+			function red(){
+				document.getElementById("id-p").style.color="red";
+			}
+			function blue(){
+				document.getElementById("id-p").style.color="blue";
+			}
+			function MyAlert(){
+				alert("自定义的alert函数!");
+			}
+			function MyConfirm(){
+				var i = confirm("想和我一起去西藏吗?");
+				if(i){
+					document.write("我的兄弟,我们这就上路.");
+				}else{
+					document.write("等着我从西藏寄给你的明信片.");
+				}
+			}
+			function MyPrompt(){
+				var i = prompt("美女给我手机号吧~","110");
+				if(i == null){
+					alert("美女你伤我心了~");
+				}else{
+					alert("今儿晚上哥哥就给你打电话");
+				}
+			}
+			function openWindow(){
+				var v = prompt("请输入需要打开的URL:","http://www.wangyihang.win/");
+				window.open(v,"_blank");
+			}
+		</script>
+	</head>
+	<body>
+		<p id="id-p" class="class-p">我还年轻,我渴望上路!</p>
+		<input type="button" value="show" onclick="show()"/>
+		<input type="button" value="hide" onclick="hide()"/>
+		<input type="button" value="red" onclick="red()"/>
+		<input type="button" value="blue" onclick="blue()"/>
+		<input type="button" value="MyAlert" onclick="MyAlert()"/>
+		<p>使用confirm(message)原生函数</p>
+		<p>此函数会弹出有message信息的对话框,对话框有确定和取消两个按钮,分别对应两个不同的返回值为:true和false</p>
+		<input type="button" value="confirm原生函数测试" onclick="MyConfirm()"/>
+		<p>使用prompt(str A, str B)原生函数</p>
+		<p>此函数会弹出对话框,让用户进行输入并提交,str A 为用户得到的提示,str B为可编辑文本框中的文字</p>
+		<p>点击确定的时候,返回文本框中的内容,点击取消的时候返回null</p>
+		<input type="button" value="prompt原生函数测试" onclick="MyPrompt()"/>
+		<p>使用window.open()原生函数</p>
+		<p>函数入口参数说明:</p>
+		<p>window.open([URL], [窗口名称], [参数字符串])</p>
+		<p>参数说明:</p>
+		<p>_blank：在新窗口显示目标网页  _self：在当前窗口显示目标网页     _top：框架网页中在上部窗口中显示目标网页</p>
+		<input type="button" value="打开新窗口" onclick="openWindow()"/>
+	</body>
+</html>

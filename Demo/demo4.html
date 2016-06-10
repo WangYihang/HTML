@@ -1,0 +1,30 @@
+<!--
+	作者：997918108@qq.com
+	时间：2016-06-10
+	描述：利用css实现静态页面遮罩层
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#mask {
+				background: #000000;/*背景颜色:即遮罩层颜色,默认黑色*/
+				opacity: 0.5;/*透明度1为不透明,0为全透明*/
+				filter: alpha(opacity=50);/*兼容ie,此处50即不透明度为50*/
+				height: 1000px;/*高度*/
+				width: 100%;/*宽度*/
+				position: absolute;/*设置位置*/
+				left: 0;
+				top: 0;
+				z-index: 0;/*z轴层级关系,越大越靠上*/
+			}
+		</style>
+	</head>
+	<body>
+		<p class="context">我还年轻,我渴望上路!</p>
+		<button id="btn">按钮</button>
+		<div id="mask"></div>
+	</body>
+</html>

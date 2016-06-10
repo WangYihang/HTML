@@ -1,0 +1,29 @@
+<!--
+	作者：997918108@qq.com
+	时间：2016-06-08
+	描述：Demo1
+	功能: js实现元素的隐藏和显示
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>js实现元素的隐藏和显示</title>
+		<script type="text/javascript">
+			function show(){
+				//将id为context的标签的style属性的display属性设置为block,即为显示的状态
+				document.getElementById("context").style.display="block";
+			}
+			function hide(){
+				//将id为context的标签的style属性的display属性设置为none,即为隐藏的状态
+				document.getElementById("context").style.display="none";
+			}
+		</script>
+	</head>
+	<body>
+		<p id="context">我还年轻,我渴望上路!</p>
+		<!--两个按钮分别对应两个函数-->
+		<input type="button" onclick="show()" value="显示" />
+		<input type="button" onclick="hide()" value="隐藏" />	
+	</body>
+</html>

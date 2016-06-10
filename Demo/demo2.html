@@ -1,0 +1,47 @@
+<!--
+	作者：997918108@qq.com
+	时间：2016-06-08
+	描述：通过javascript控制类名（className 属性）
+	备注: 为了描述类名的改变,使用css样式来表现
+--><!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>通过javascript控制类名（className 属性）</title>
+		<script type="text/javascript">
+			function one(){
+				document.getElementById("p").className="one";
+			}
+			function two(){
+				document.getElementById("p").className="two";
+			}
+			function three(){
+				document.getElementById("p").className="three";
+			}
+			
+		</script>
+		<style type="text/css">
+			.zero{
+				background: coral;
+			}
+			.one{
+				background: darkblue;
+				color: #0f0f0f;
+			}
+			.two{
+				background: salmon;
+				color: #080808;
+			}
+			.three{
+				background: gold;
+				color: #030303;
+			}
+		</style>
+	</head>
+	<body>
+		<p id="p" class="zero">我还年轻,我渴望上路!</p>
+		<input type="button" value="样式1" onclick="one()" />
+		<input type="button" value="样式2" onclick="two()" />
+		<input type="button" value="样式3" onclick="three()" />
+	</body>
+</html>

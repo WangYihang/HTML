@@ -1,0 +1,66 @@
+<!--
+	作者：997918108@qq.com
+	时间：2016-06-10
+	描述：静态搜索页面
+	不足: 布局的问题,如何将元素居中,浏览器适配问题,手机端适配问题,字体不能在chrome中正常显示,css文件集成在html中
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>GoodBye World!</title>
+		<style type="text/css">
+			body {
+				background-image: url(img/background.jpg);
+				position: relative;
+			}
+			form {
+				float: left;
+				padding: 5px;
+				background-color: #8C8C8C;
+				border-radius:5px;
+			}
+			#search-input {
+				padding-left: 5px;
+				border: 0;
+				float: left;
+				height: 46px;
+				width: 420px;
+				font: "微软雅黑";
+				outline: 0;
+				border-radius:5px;
+				font-size: 24px;
+			}
+			#search-submit {
+				margin-left: 5px;
+				background-color: transparent;
+				border: 0;
+				float: left;
+				background-image: url(img/search.png);
+				height: 48px;
+				width: 48px;
+			}
+			#searchBox {
+				margin-left: 32%;
+				margin-top: 30px;
+			}
+			#logo {
+				margin-left: 38%;
+				margin-top: 12%;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<div id="logo">
+				<img src="img/logo.png"/>
+			</div>
+			<div id="searchBox">
+				<form>
+					<input type="text" id="search-input"/>
+					<input type="submit" id="search-submit" value=""/>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
