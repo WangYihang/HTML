@@ -1,0 +1,200 @@
+<!--
+	作者：997918108@qq.com
+	时间：2016-06-10
+	描述: 仿百度登陆界面
+	知识点: 遮罩,居中,js封装
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>利用js实现元素居中(登陆界面demo)</title>
+		<style type="text/css">
+			body{
+				background: url(img/background.png) no-repeat top center #fff;
+				font: "微软雅黑";
+			}
+			.ui-dialog{
+				width: 390px;
+				height: auto;
+				position: absolute;
+				z-index: 9000;
+				top: 0px;
+				left: 0px;
+				background: #FFFFFF;
+				display: none;
+			}
+			.ui-dialog-title{
+				height: 32px;
+				line-height: 32px;
+				background: gainsboro;
+				padding-left: 5px;
+				font-size: 18px;
+				color: #8C8C8C;
+				font-weight: 900;
+				cursor: move;/*鼠标悬停样式*/
+			}
+			.ui-dialog-content{
+				height: 395px;
+				width: 390px;
+				background: url(img/content.png);
+			}
+			.ui-dialog-closeButton{
+				height: 20px;
+				width: 20px;
+				display: block;
+				position: absolute;
+				top: 5px;
+				right: 5px;
+				background: url(img/close0.png);
+			}
+			.ui-dialog-closeButton:hover{
+				/*hover伪类,用于设置鼠标悬停样式改变*/
+				background: url(img/close1.png);
+			}
+			.ui-mask{
+				/*遮罩层*/
+				height: 100%;
+				width: 100%;
+				background: black;
+				opacity: 0.5;/*透明度*/
+				filter: alpha(opacity=50);/*使用滤镜兼容ie*/
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				z-index: 8000;
+				display: none;
+			}
+			.login-in{
+				text-align: right;
+				line-height: 20px;
+				padding-right: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="ui-dialog" id="ui-dialog">
+			<div class="ui-dialog-title" id="ui-dialog-title">
+				登陆百度账号
+				<a href="javascript:hideDialog();" class="ui-dialog-closeButton"></a>
+			</div>
+			<div class="ui-dialog-content"></div>
+		</div>
+		<div class="ui-mask" id="ui-mask" onselectstart="return false" onclick="hideDialog()"></div>
+		<div class="login-in">
+			<a href="javascript:showDialog();">登陆</a>
+		</div>
+	</body>
+	<script type="text/javascript">
+		/**
+		 * 获取元素对象
+		 * @param {Object} id
+		 */
+		function getE(id){
+			return document.getElementById(id);
+		} 
+		/**
+		 * 使元素铺满全屏
+		 * @param {Object} e
+		 */
+		function fillScreen(e){
+			//获取可视区域尺寸
+			var vH = document.documentElement.clientHeight;
+			var vW = document.documentElement.clientWidth;
+			//设置铺满全屏
+			e.style.height = vH + "px";
+			e.style.width = vW + "px";
+		}
+		/**
+		 * 元素在可视区域中居中
+		 * @param {Object} e
+		 */
+		function toCenter(e){
+			//获取可视区域尺寸
+			var vH = document.documentElement.clientHeight;
+			var vW = document.documentElement.clientWidth;
+			//获取元素尺寸
+			var eH = e.offsetHeight;
+			var eW = e.offsetWidth;
+			//调整居中
+			e.style.top = (vH-eH)/2 + "px";
+			e.style.left = (vW-eW)/2 + "px";
+		}
+		/**
+		 * 显示元素
+		 * @param {Object} e
+		 */
+		function showE(e){
+			e.style.display = "block";
+		}
+		/**
+		 * 隐藏元素
+		 * @param {Object} e
+		 */
+		function hideE(e){
+			e.style.display = "none";
+		}
+		function showDialog(){
+			//获取对象
+			var dialog = getE("ui-dialog");
+			var mask = getE("ui-mask");
+			//显示dialog
+			showE(dialog);
+			//设置居中
+			toCenter(dialog);
+			//设置遮罩大小
+			fillScreen(mask);
+			//显示遮罩
+			showE(mask);
+		}
+		function hideDialog(){
+			//获取对象
+			var dialog = getE("ui-dialog");
+			var mask = getE("ui-mask");
+			//隐藏登录框
+			hideE(dialog);
+			//隐藏遮罩层
+			hideE(mask);
+		}
+		//开始处理拖动
+		//鼠标按下位置
+		var offsetX;
+		var offsetY;
+		//拖动状态标记
+		var isDraging = false;
+		//鼠标事件一(鼠标按下)
+		getE("ui-dialog-title").addEventListener("mousedown",function(e){
+			var e = e || window.event;//兼容IE,IE的鼠标事件从window.event获得
+			offsetX = e.pageX - getE("ui-dialog").offsetLeft;
+			offsetY = e.pageY - getE("ui-dialog").offsetTop;
+			isDraging = true;
+		})
+		//鼠标事件二(鼠标移动)
+		document.onmousemove = function(e){
+			var e = e || window.event;//兼容IE,IE的鼠标事件从window.event获得
+			//定义移动距离
+			var moveX = e.pageX - offsetX;
+			var moveY = e.pageY - offsetY;
+			//获得页面可视尺寸
+			var vH = document.documentElement.clientHeight;
+			var vW = document.documentElement.clientWidth;
+			//获取元素尺寸
+			var eH = getE("ui-dialog").offsetHeight;
+			var eW = getE("ui-dialog").offsetWidth;
+			//最大移动举例
+			var maxX = vW - eW;
+			var maxY = vH - eH;
+			if(isDraging === true){
+				//限制移动范围(厉害!)
+				moveX = Math.min(maxX,Math.max(0, moveX));
+				moveY = Math.min(maxY,Math.max(0, moveY));
+				getE("ui-dialog").style.left = moveX + "px";
+				getE("ui-dialog").style.top = moveY + "px";
+			}
+		}
+		//鼠标事件三(鼠标松开)
+		document.onmouseup = function(){
+			isDraging = false;
+		}
+	</script>
+</html>
