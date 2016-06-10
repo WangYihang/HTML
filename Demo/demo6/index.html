@@ -12,13 +12,17 @@
 		<style type="text/css">
 			body {
 				background-image: url(img/background.jpg);
-				/*position: relative;*/
+				padding: 30px;
 			}
 			#searchBox{
 				float: left;
 				padding: 5px;
 				background-color: #8C8C8C;
 				border-radius:5px;
+				width: 480px;
+				height: 48px;
+				margin-left: 400px;
+				margin-top: 5px;
 			}
 			#search-input {
 				padding-left: 5px;
@@ -40,37 +44,22 @@
 				height: 48px;
 				width: 48px;
 			}
+			.logo{
+				background-image: url(img/logo.png);
+				height: 38px;
+				width: 312px;
+				margin: 100px auto;
+			}
 		</style>
 	</head>
 	<body>
 		<div>
-			<div id="logo">
-				<img src="img/logo.png"/>
+			<div class="logo">
 			</div>
 			<form id="searchBox">
-				<input type="text" id="search-input"/>
-				<input type="submit" id="search-submit" value=""/>
+					<input type="text" id="search-input"/>
+					<input type="submit" id="search-submit" value=""/>
 			</form>
 		</div>
 	</body>		
-	<script type="text/javascript">
-			//获取对象
-			function ge(id){
-				return document.getElementById(id);
-			}
-			//自动居中
-			function tc(e){
-				//获取可视区域尺寸
-				var vHeight = document.documentElement.clientHeight;
-				var vWidth = document.documentElement.clientWidth;
-				//获取元素宽高
-				var height = e.offsetHeight;
-				var width = e.offsetWidth;
-				//设置居中
-				e.style.top = (vHeight - height) / 2 + "px";
-				e.style.left = (vWidth - width) / 2 + "px";
-//				alert((vHeight - height) / 2 + "px");
-//				alert((vWidth - width) / 2 + "px");
-			}
-		</script>
 </html>
