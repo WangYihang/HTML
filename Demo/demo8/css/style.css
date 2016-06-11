@@ -1,0 +1,74 @@
+/*全局配置*/
+body{
+	background: #eee;
+}
+h1{
+	width:100px;
+	margin: 30px auto;
+}
+.photos{
+	height: 100%;
+	width: 600px;
+	margin: 30px auto;
+	position: relative;
+}
+/*图片初始配置*/
+img{
+	padding: 5px;
+	background: #aaa;
+	position: absolute;
+	opacity: 0.8;
+	-webkit-box-shadow:10px 10px 10px rgba(100, 100, 100, 0.3); 
+	-moz-box-shadow:10px 10px 10px rgba(100, 100, 100, 0.3); 
+	box-shadow:10px 10px 10px rgba(100, 100, 100, 0.3); 
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+ 	-ms-transition: all 1s ease;
+	transition: all 1s ease;
+}
+/*图片鼠标悬停配置*/
+img:hover{
+	z-index: 999;
+	-webkit-transform: rotate(0deg);/*兼容chrome*/
+	-moz-transform: rotate(0deg);/*兼容火狐*/
+	transform: rotate(0deg);
+	-moz-transform:scale(1.5,1.5); 
+	-webkit-transform:scale(1.5,1.5); 
+}
+
+/*单个图片信息配置(位置,初始旋转角度)*/
+.girl1{
+	top: 20px;
+	left: 140px;
+	z-index: 10;
+	-webkit-transform: rotate(30deg);/*兼容chrome*/
+	-moz-transform: rotate(30deg);/*兼容火狐*/
+	transform: rotate(30deg);
+}
+
+.girl2{
+	top: 10px;
+	left: 400px;
+	z-index: 20;
+	-webkit-transform: rotate(-10deg);/*兼容chrome*/
+	-moz-transform: rotate(-10deg);/*兼容火狐*/
+	transform: rotate(-10deg);
+}
+
+.girl3{
+	top: 50px;
+	left: 0px;
+	z-index: 30;
+	-webkit-transform: rotate(20deg);/*兼容chrome*/
+	-moz-transform: rotate(20deg);/*兼容火狐*/
+	transform: rotate(20deg);
+}
+
+.girl4{
+	top: 40px;
+	left: 250px;
+	z-index: 40;
+	-webkit-transform: rotate(-45deg);/*兼容chrome*/
+	-moz-transform: rotate(-45deg);/*兼容火狐*/
+	transform: rotate(-45deg);
+}
