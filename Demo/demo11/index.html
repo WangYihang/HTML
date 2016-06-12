@@ -1,0 +1,82 @@
+<!--
+	作者：997918108@qq.com
+	时间：2016-06-11
+	描述：利用jquery的type.js插件实现打字机特效
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!--光标闪动特效-->
+		<link rel="stylesheet" href="css/cursor.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<!--导入jquery库函数-->
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<!--导入type插件-->
+		<script type="text/javascript" src="js/typed.js" ></script>
+		<!--打字机函数-->
+		<script>
+		    $(function(){
+		        $(".element").typed({
+		        	/*可以利用"^1000"进行停顿,'^'后面的数字单位为毫秒*/
+		            strings: ["亲爱的宝贝 : <br/> " + 
+		            "******************************************<br/> " + 
+		            "你知道吗 ^200 ?<br/> " +
+		            "我从来没有想过自己可以这么幸运地拥有你^200<br/>" + 
+		            "你的阳光......你的体贴......你的温柔......^200<br/>" +
+		            "你就像一个天使^200<br/>" +
+		            "突然出现在我的生命里^200<br/>" +
+		            "照亮我生命里的每一个角落^200<br/>" +
+		            "带给我惊喜......^2000<br/>" +
+		            "宝贝^200<br/>" +
+		            "你^200说^200.^200.^200.^200.^200.^200<br/>" +
+		            "借我^200你的一生^200<br/>" +
+		            "好不好^200<br/>" +
+		            "我要^200靠在你身边^200<br/>" +
+		            "诉说^200爱恋^200不变^200<br/>" +
+		            "直^200到^200我^200不^200能^200再^200说^200.^200.^200.^200.^200.^200.^200<br/>" +
+		            "你^200也^200听^200不^200见^200.^200.^200.^200.^200.^200.^200<br/>" +
+		            "******************************************<br/>"],
+		            typeSpeed: 100,
+		        });
+		    });
+		</script>
+		<title>致我们的爱</title>
+	</head>
+	<body>
+		<audio src="http://sc.111ttt.com/up/mp3/254115/97C214A7C7D7C3F223B15865CFD262B8.mp3" autoplay="autoplay" id="type-audio" loop="1"></audio>
+		<audio src="res/type.wav" autoplay="autoplay" id="type-audio" loop="1"></audio>
+		<!--导航栏-->
+		<div></div>
+		<!--打字机显示部分-->
+		<div id="type-box">
+			<span class="element"></span>
+		</div>
+		<!--日期部分-->
+		<div id="dateCounter">
+			<h3>亲爱的</h3>
+			<h3>我们已经一起走过</h3>
+			<h3><span id="days"></span>天.</h3>
+			<h3><span id="hours"></span>小时.</h3>
+			<h3><span id="minutes"></span>分钟.</h3>
+			<h3><span id="seconds"></span>秒.</h3>
+		</div>
+	<script type="text/javascript">
+			window.onload=function(){
+				setInterval(function(){fnDate();},1000);
+			}
+			function fnDate(){
+				var dateNow= new Date();
+				var days = (dateNow.getTime()/1000 - 1430409600) / 86400;
+				var hours = (((dateNow.getTime()/1000 - 1430409600) % 86400)) / 3600;
+				var minutes = (((dateNow.getTime()/1000 - 1430409600) % 86400) % 3600) / 60;
+				var seconds = ((((dateNow.getTime()/1000 - 1430409600) % 86400) % 3600) % 60) % 60;
+				document.getElementById("days").innerHTML = Math.floor(days);
+				document.getElementById("hours").innerHTML = Math.floor(hours);
+				document.getElementById("minutes").innerHTML = Math.floor(minutes);
+				document.getElementById("seconds").innerHTML = Math.floor(seconds);
+				setTimeout("fnDate()",1000);
+			}
+	</script>
+	</body>
+</html>

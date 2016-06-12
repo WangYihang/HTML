@@ -1,0 +1,57 @@
+*{
+	 margin: 0;
+	 padding: 0;
+	 border: 0;
+	 outline: 0;
+	 vertical-align: baseline;
+	 background: transparent;
+	 -webkit-font-smoothing: auto;
+}
+body{
+	background: url(../img/background.jpg) fixed center center no-repeat;
+	background-size: cover;
+	width: 100%;
+	position: relative;
+}
+#type-box{
+	background-color: rgba(0,0,0,0.2);
+	border-radius: 10px;
+	width: 470px;
+	height: 540px;
+	padding: 30px;
+	margin: 30px;
+	font-family:"微软雅黑";
+	font-size: 24px;
+	font-weight: 300;
+	transition: all 1s ease;
+}
+#type-box:hover{
+	background-color: rgba(0,0,0,0.4);
+	color: #FFFFFF;
+}
+#dateCounter{
+	background-color: rgba(0,0,0,0.2);
+	border-radius: 10px;
+	position: absolute;
+	padding: 15px;
+	top: 0;
+	right: 30px;
+	color:dimgrey;
+	font-family: "微软雅黑";
+	font-size: 18px;
+	text-align: center;
+	transition: all 1s ease;
+}
+#dateCounter:hover{
+	background-color: rgba(0,0,0,0.4);
+	color: #FFFFFF;
+}
+#dateCounter h3 span{
+	font-size: 32px;
+	color: #8C8C8C;
+	transition: all 1s ease;
+}
+#dateCounter:hover h3 span{
+	font-size: 42px;
+	color: #FFFFFF;
+}
