@@ -3,8 +3,8 @@ body{
 	background: #eee;
 }
 h1{
-	width:100px;
-	margin: 30px auto;
+	text-align: center;
+	line-height: 100px;
 }
 .photos{
 	height: 100%;
