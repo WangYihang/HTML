@@ -1,0 +1,55 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: lightcyan;
+	position: relative;
+}
+ul{
+	position: absolute;
+	height: 30px;
+	width: 500px;
+	left: 50%;
+	margin-left: -250px;
+	margin-top: 50px;
+	list-style: none;
+	float: left;
+}
+li{
+	float: left;
+}
+a{
+	padding: 10px;
+	font-family: "微软雅黑";
+	font-size: 24px;
+	color: lightseagreen;
+	text-decoration: blink;/*清除超链接下划线*/
+	transition: all 0.5s linear;
+	border: 2px solid #CCCCCC;
+	border-radius: 4px;/*圆角边框*/
+}
+#list1{
+	position: absolute;
+	left: 0%;
+}
+#list2{
+	position: absolute;
+	left: 20%;
+}
+#list3{
+	position: absolute;
+	left: 40%;
+}
+#list4{
+	position: absolute;
+	left: 60%;
+}
+#list5{
+	position: absolute;
+	left: 80%;
+}
+a:hover{
+	color: #FFFFFF;
+	background: rgba(0,0,0,0.2);
+}
