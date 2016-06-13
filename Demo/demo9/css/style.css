@@ -1,0 +1,36 @@
+/*清除默认样式*/
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: "微软雅黑";
+	font-size: 24px;
+	position: relative;
+}
+#content{
+	position: relative;
+	background-color:#EEEEEE ;
+	margin: 30px auto;
+	height: 100px;
+	width: 300px;
+	box-shadow: 0px 0px 2px rgba(0,0,0,0.5),0px -5px 20px rgba(0,0,0,0.1) inset;
+}
+/*使文字居中*/
+#content p{
+	text-align: center;
+	line-height: 100px;
+}
+/*背面阴影*/
+#content:before,#content:after{
+	z-index: -1;/*阴影处于最底层*/
+	content: "";/*清除内容,如果无此语句则阴影不会出现*/
+	/*定位(尺寸)*/
+	position: absolute;
+	top: 50%;
+	bottom: 0;
+	right: 5px;
+	left: 5px;
+	border-radius: 50px/10px;/*设置圆角*/
+	box-shadow: 0px 1px 10px rgba(0,0,0,0.3);/*阴影配置*/
+}
