@@ -1,0 +1,79 @@
+*{margin: 0;padding: 0;transition: all 0.5s ease}
+.goods{
+	height: 100px;
+	width: 840px;
+	margin: 0 auto;
+	/*position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -420px;*/
+	/*border: 1px solid #696969;*/
+}
+.goods li{
+	height: 100px;
+	width: 160px;
+	overflow: hidden;
+	float: left;
+}
+.goods a{
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	text-decoration: none;
+}
+/*图片样式*/
+.goods img{
+	/*相对a右下对齐*/
+	position: absolute;
+	height: 60px;
+	width: 60px;
+	bottom: -15px;
+	right: -15px;
+}
+/*设置文字样式*/
+.info{
+	padding: 3px;
+	font-family:"微软雅黑" ;
+	font-size: 16px;
+	overflow: hidden;
+}
+/*设置分割线*/
+.line{
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 0;
+	border: 1px dotted #696969;
+}
+/*设置遮罩层*/
+.mask{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #000000;
+	opacity: 0.15;
+}
+/*鼠标悬停状态*/
+li:hover{
+	width: 200px;
+}
+li:hover img{
+	bottom: 0px;
+	right: 0px;
+	width: 80px;
+	height: 80px;
+}
+li:hover h2{
+	font-size: 28px;
+}
+li:hover p{
+	font-size: 20px;
+}
+li:hover .mask{
+	opacity: 0;
+}
