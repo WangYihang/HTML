@@ -1,0 +1,25 @@
+*{
+	margin: 0;
+	padding: 0;
+	transition: all 0.4s ease;
+	background-color: #E0FFFF;
+}
+li{
+	list-style: none;
+	padding-top: 15px;
+	padding-left: 30px;
+	
+}
+a{
+	padding: 3px;
+	border-radius: 10px;
+	text-decoration: none;
+	text-align: center;
+	color: #FF7F50;
+	font-family: "微软雅黑";
+	font-size: 28px;
+	border: 2px solid #FF7F50;
+}
+a:hover{
+	background-color: rgba(255,160,122,0.5);
+}
