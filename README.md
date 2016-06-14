@@ -1,6 +1,5 @@
 # Front-End-Development
 ####<a href="http://wangyihang.win/git-hub/Front-End-Development/index.html">Jump To The Home Page For Experiencing</a>
--
 ####Demo Pages
 <li><a href="http://wangyihang.win/git-hub/Front-End-Development/Demo/demo1/index.html">1. js实现元素的隐藏和显示</a></li>
 <li><a href="http://wangyihang.win/git-hub/Front-End-Development/Demo/demo2/index.html">2. 通过javascript控制类名</a></li>
