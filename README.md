@@ -36,4 +36,4 @@
 <li><a href="Demo/demo14/index.html">14. 利用js实现可调大小控件</a></li>
 <li><a href="Demo/demo15/index.html">15. css滤镜演示页面</a></li>
 ######Hey,guys,welcome for your pull requests!
-######If you have any questions,please [contact me]("http://wangyihang.win/")!Thank you once again!
+######If you have any questions,please [contact me](http://wangyihang.win/ "Author' Blog")!Thank you once again!
