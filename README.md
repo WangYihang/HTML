@@ -16,6 +16,7 @@
 <li><a href="http://wangyihang.win/git-hub/Front-End-Development/Demo/demo13/index.html">13. 利用css实现多级导航栏</a></li>
 <li><a href="http://wangyihang.win/git-hub/Front-End-Development/Demo/demo14/index.html">14. 利用js实现可调大小控件</a></li>
 <li><a href="http://wangyihang.win/git-hub/Front-End-Development/Demo/demo15/index.html">15. css滤镜演示页面</a></li>
+
 -
 ####<a href="http://wangyihang.github.io/Front-End-Development">Jump To The Home Page For Source Code</a>
 ###Source Pages
@@ -34,6 +35,5 @@
 <li><a href="Demo/demo13/index.html">13. 利用css实现多级导航栏</a></li>
 <li><a href="Demo/demo14/index.html">14. 利用js实现可调大小控件</a></li>
 <li><a href="Demo/demo15/index.html">15. css滤镜演示页面</a></li>
-#####<a href="http://wangyihang.win/">Author' Blog</a>
 ######Hey,guys,welcome for your pull requests!
-######If you have any questions,please contact me!Thank you once again!
+######If you have any questions,please [contact me]("http://wangyihang.win/")!Thank you once again!
