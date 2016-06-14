@@ -1,0 +1,147 @@
+*{
+	margin: 0;
+	padding: 0;
+	transition: all 0.4s ease;
+}
+body{
+	background-color: #EEEEEE;
+	position: relative;
+}
+img{
+	position: absolute;
+	height: 400px;
+	width: 400px;
+	top: 70px;
+	right: 70px;
+	border: 8px solid #EEEEEE;
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+}
+#photo:hover{
+	-webkit-filter: none; /* Chrome, Opera */
+    -moz-filter: none;
+    -ms-filter: none;    
+    filter: none;
+}
+.button{
+	width: 200px;
+}
+.button li{
+	text-align: center;
+	list-style: none;
+	border: 2px solid #696969;
+	margin: 10px;
+}
+.button li:hover{
+	background-color: #FA8072;
+}
+.button li a{
+	
+	text-decoration: none;
+	color: #6495ED;
+	font-family: "微软雅黑";
+	font-size: 24px;
+}
+
+/*滤镜效果*/
+/*棕色*/
+.Speia{
+    /**  格式，filer: sepia(效果范围)
+     *  效果范围，取值范围为0-1或0-100%；0表示无效果，1或100%表示最大效果
+     */
+    -webkit-filter: sepia(100%);  
+    -moz-filter:sepia(100%);
+    -o-filter: sepia(100%);
+    -ms-filter: sepia(100%);
+    filter: sepia(100%);  
+}
+/*灰度*/
+.Grayscale{
+    /**  格式，filer: grayscale(效果范围)
+     *  效果范围，取值范围为0-1或0-100%；0表示无效果，1或100%表示最大效果
+     */
+     -webkit-filter: grayscale(100%);
+     -o-filter: grayscale(100%);
+     -moz-filter: grayscale(100%);
+     -ms-filter: grayscale(100%);
+     filter: grayscale(100%);  
+}
+/*模糊*/
+.Blur{
+    /**  格式，filer: blur(模糊半径)
+     *  模糊半径，取值范围0~Npx，0为无效果
+     */
+     -webkit-filter: blur(10px); 
+     -moz-filter: blur(10px); 
+     -o-filter: blur(10px); 
+     -ms-filter: blur(10px); 
+     filter: blur(10px); 
+}
+/*反色*/
+.Inver{
+    /**  格式，filer: invert(效果范围)
+     *  效果范围，取值范围0~1或0~100%，0为无效果，1或100%表示最大效果
+     */
+     -webkit-filter: invert(1);
+     -moz-filter: invert(1);
+     -o-filter: invert(1);
+     -ms-filter: invert(1);
+     filter: invert(1); 
+}
+/*饱和度*/
+.Saturate{
+    /**  格式，filer: saturate(效果范围)
+     *  效果范围，取值范围>=0的数字或百分数，1为无效果，0为灰度图
+     */
+     -webkit-filter: saturate(2);
+     -moz-filter: saturate(2);
+     -o-filter: saturate(2);
+     -ms-filter: saturate(2);
+     filter: saturate(2); 
+}
+/*对比度*/
+.Contrast{
+    /**  格式，filer: contrast(效果范围)
+     *  效果范围，取值范围>=0的数字或百分数，1为无效果
+     */
+     -webkit-filter: contrast(2);
+     -moz-filter: contrast(2);
+     -o-filter: contrast(2);
+     -ms-filter: contrast(2);
+     filter: contrast(2); 
+}
+/*亮度*/
+.Brightness{
+    /**  格式，filer: brightness(效果范围)
+     *  效果范围，取值范围>=0的数字或百分数，1为无效果
+     */
+     -webkit-filter: brightness(2);
+     -moz-filter: brightness(2);
+     -o-filter: brightness(2);
+     -ms-filter: brightness(2);
+     filter: brightness(2); 
+}
+/*色相*/
+.HueRotate{
+    /**  格式，filer: hue-rotate(效果范围)
+     *  效果范围，取值范0deg~365deg，0（默认值）为无效果
+     */
+     -webkit-filter: hue-rotate(200deg);
+     -moz-filter: hue-rotate(200deg);
+     -o-filter: hue-rotate(200deg);
+     -ms-filter: hue-rotate(200deg);
+     filter: hue-rotate(200deg); 
+}
+/*阴影*/
+.DropShadow{
+    /**  格式，filer: drop-shadow(x-offset y-offset 阴影模糊半径 阴影颜色)
+     *  x-offset和y-offset为阴影的相对于元素左上角的位移距离；
+     * 注意：
+     *     1. 阴影的外观受border-radius样式的影响；
+     *     2. :after和:before等伪元素会继承阴影的效果。
+     */
+     -webkit-filter: drop-shadow(5px 5px 5px #000000);
+     -moz-filter: drop-shadow(5px 5px 5px #000000);
+     -o-filter: drop-shadow(5px 5px 5px #000000);
+     -ms-filter: drop-shadow(5px 5px 5px #000000);
+     filter: drop-shadow(5px 5px 5px #000000); 
+}

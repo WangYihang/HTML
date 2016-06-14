@@ -1,0 +1,53 @@
+<!--
+	作者：997918108@qq.com
+	时间：2016-06-14
+	描述：利用css实现滤镜,js按钮选择并配置滤镜参数
+	不足: 目前只能演示,还不能定制显示效果,之后添加js控制显示效果的逻辑
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="js/filter.js" type="text/javascript" charset="utf-8"></script>
+		<title>CSS滤镜效果演示</title>
+	</head>
+	<body>
+		<h1 style="font-family:'微软雅黑'; width: 260px; margin: 0 auto;">CSS滤镜效果演示</h1>
+		<p style="font-family:'微软雅黑'; width: 200px; margin: 0 auto;">鼠标移动到图片上查看原图</p>
+		<div id="photo" class="photo">
+			<img src="img/logo.jpg" id="image"/>
+		</div>
+		<div class="button">
+			<ul>
+				<li>
+					<a href="javascript:;" onclick="openSpeia('image')" title="棕色"><span>Speia</span></a>
+				</li>
+				<li>
+					<a href="javascript:;" onclick="openGrayscale('image')" title="灰度"><span>Grayscale</span></a>
+				</li>
+				<li>
+					<a href="javascript:;" onclick="openBlur('image')" title="模糊"><span>Blur</span></a>
+				</li>
+				<li>
+					<a href="javascript:;" onclick="openInver('image')" title="反色"><span>Inver</span></a>
+				</li>
+				<li>
+					<a href="javascript:;" onclick="openSaturate('image')" title="饱和度"><span>Saturate</span></a>
+				</li>
+				<li>
+					<a href="javascript:;" onclick="openContrast('image')" title="对比度"><span>Contrast</span></a>
+				</li>
+				<li>
+					<a href="javascript:;" onclick="openBrightness('image')" title="亮度"><span>Brightness</span></a>
+				</li>
+				<li>
+					<a href="javascript:;" onclick="openHueRotate('image')" title="色相"><span>Hue Rotate</span></a>
+				</li>
+				<li>
+					<a href="javascript:;" onclick="openDropShadow('image')" title="阴影"><span>Drop Shadow</span></a>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
