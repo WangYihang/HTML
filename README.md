@@ -1,5 +1,5 @@
 # Front-End-Development
-####<a href="http://wangyihang.github.io/HTML">Jump To The Home Page</a>
+####<a href="http://wangyihang.github.io/Front-End-Development/">Jump To The Home Page</a>
 <li><a href="Demo/demo1/index.html">1. js实现元素的隐藏和显示</a></li>
 <li><a href="Demo/demo2/index.html">2. 通过javascript控制类名</a></li>
 <li><a href="Demo/demo3/index.html">3. 通过JavaScript实现改变标签的属性:隐藏,显示,改变颜色</a></li>
