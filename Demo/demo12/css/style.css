@@ -6,7 +6,7 @@ body{
 	background-color: lightcyan;
 	position: relative;
 }
-ul{
+#navigation-bar{
 	position: absolute;
 	height: 30px;
 	width: 500px;
@@ -16,10 +16,10 @@ ul{
 	list-style: none;
 	float: left;
 }
-li{
+#navigation-bar li{
 	float: left;
 }
-a{
+#navigation-bar li a{
 	padding: 10px;
 	font-family: "微软雅黑";
 	font-size: 24px;
@@ -28,26 +28,26 @@ a{
 	transition: all 0.5s linear;
 	border: 2px solid #AAAAAA;
 }
-#list1{
+#navigation-bar li #list1{
 	position: absolute;
 	left: 0%;
 }
-#list2{
+#navigation-bar li #list2{
 	position: absolute;
 	left: 20%;
 }
-#list3{
+#navigation-bar li #list3{
 	position: absolute;
 	left: 40%;
 }
-#list4{
+#navigation-bar li #list4{
 	position: absolute;
 	left: 60%;
 }
-#list5{
+#navigation-bar li #list5{
 	position: absolute;
 	left: 80%;
 }
-a:hover{
-	background: rgba(0,0,0,0.2);
+#navigation-bar li a:hover{
+	background: rgba(55,55,55,0.2);
 }
