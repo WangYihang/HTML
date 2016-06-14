@@ -1,6 +1,6 @@
 # Front-End-Development
----
 ####<a href="http://wangyihang.win/git-hub/Front-End-Development/index.html">Jump To The Home Page For Experiencing</a>
+-
 ####Demo Pages
 <li><a href="http://wangyihang.win/git-hub/Front-End-Development/Demo/demo1/index.html">1. js实现元素的隐藏和显示</a></li>
 <li><a href="http://wangyihang.win/git-hub/Front-End-Development/Demo/demo2/index.html">2. 通过javascript控制类名</a></li>
@@ -17,8 +17,8 @@
 <li><a href="http://wangyihang.win/git-hub/Front-End-Development/Demo/demo13/index.html">13. 利用css实现多级导航栏</a></li>
 <li><a href="http://wangyihang.win/git-hub/Front-End-Development/Demo/demo14/index.html">14. 利用js实现可调大小控件</a></li>
 <li><a href="http://wangyihang.win/git-hub/Front-End-Development/Demo/demo15/index.html">15. css滤镜演示页面</a></li>
----
 ####<a href="http://wangyihang.github.io/Front-End-Development">Jump To The Home Page For Source Code</a>
+-
 ###Source Pages
 <li><a href="Demo/demo1/index.html">1. js实现元素的隐藏和显示</a></li>
 <li><a href="Demo/demo2/index.html">2. 通过javascript控制类名</a></li>
