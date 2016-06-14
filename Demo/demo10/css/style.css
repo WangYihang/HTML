@@ -1,0 +1,102 @@
+/*清除默认样式*/
+*{
+	margin: 0;
+	padding: 0;
+	transition: all 0.5s ease;
+}
+body{
+	background-color: lightsalmon;
+}
+li{
+	float: left;
+	list-style: none;
+	margin-top: 50px;
+	margin-left: 50px;
+}
+.photo-v{
+	padding: 5px;
+	background-color: #EEEEEE;
+	position: relative;
+	height: 280px;
+	width: 210px;
+	/*内阴影*/
+	box-shadow: 0px 0px 2px rgba(0,0,0,0.5),0px -5px 20px rgba(0,0,0,0.1) inset;
+}
+.photo-v img{
+	/*将图片转成块,这样才能设置尺寸*/
+	display: block;
+	position: absolute;
+	margin: 5px;
+	height: 270px;
+	width: 200px;
+	-webkit-filter: blur(4px); /* Chrome, Opera */
+    -moz-filter: blur(4px);
+    -ms-filter: blur(4px);    
+    filter: blur(4px);
+}
+/*背面阴影*/
+.photo-v:before,.photo-v:after{
+	z-index: -1;/*阴影处于最底层*/
+	content: "";/*清除内容,如果无此语句则阴影不会出现*/
+	/*定位(尺寸)*/
+	position: absolute;
+	top: 50%;
+	bottom: 0;
+	right: 5px;
+	left: 5px;
+	border-radius: 50px/10px;/*设置圆角*/
+	box-shadow: 0px 1px 10px rgba(0,0,0,0.3);/*阴影配置*/
+}
+.photo-v:hover{
+	background-color:cornflowerblue;
+}
+.photo-v:hover img{
+	-webkit-filter: none; /* Chrome, Opera */
+    -moz-filter: none;
+    -ms-filter: none;    
+    filter: none; 
+}
+
+.photo-h{
+	padding: 5px;
+	background-color: #EEEEEE;
+	position: relative;
+	width: 280px;
+	height: 210px;
+	/*内阴影*/
+	box-shadow: 0px 0px 2px rgba(0,0,0,0.5),0px -5px 20px rgba(0,0,0,0.1) inset;
+}
+.photo-h img{
+	/*将图片转成块,这样才能设置尺寸*/
+	display: block;
+	position: absolute;
+	margin: 5px;
+	width: 270px;
+	height: 200px;
+	-webkit-filter: blur(4px); /* Chrome, Opera */
+    -moz-filter: blur(4px);
+    -ms-filter: blur(4px);    
+    filter: blur(4px);
+}
+/*背面阴影*/
+.photo-h:before,.photo-h:after{
+	z-index: -1;/*阴影处于最底层*/
+	content: "";/*清除内容,如果无此语句则阴影不会出现*/
+	/*定位(尺寸)*/
+	position: absolute;
+	top: 50%;
+	bottom: 0;
+	right: 5px;
+	left: 5px;
+	border-radius: 50px/10px;/*设置圆角*/
+	box-shadow: 0px 1px 10px rgba(0,0,0,0.3);/*阴影配置*/
+}
+.photo-h:hover{
+	background-color:cornflowerblue;
+}
+.photo-h:hover img{
+	-webkit-filter: none; /* Chrome, Opera */
+    -moz-filter: none;
+    -ms-filter: none;    
+    filter: none; 
+}
